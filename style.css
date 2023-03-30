@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --white: #FFFFFF;
+    --lightpink: #FEEAFA;
+    --darkpink: #CBC0D3;
+    --verylightblue: #EFF1FF;
+    --lightpurple: #6c4581;
+    --darkblue: #4A4E69;
+    --darkpurple: #23053A;
+}
+body {
+    font-size: 1.6rem;
+    background: var(--verylightblue);
+}
+header {
+    background: var(--lightpurple);
+    width: 100%;
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 2.7rem;
+}
+header img {
+    width: 20.7rem;
+    height: 16.7rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all 3s;
+}
+header img:hover {
+    transform: rotate(360deg);
+}
+header .title-wrapper {
+    background: var(--darkpink);
+    height: 4.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 0.5rem + 8vw , 4.0rem);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+main {
+    max-width: clamp(33rem, 30rem +60vw, 70rem);
+    margin: auto;
+    width: 90%;
+}
+main section {   
+    max-width: 30.5rem;
+    margin: auto;
+    padding-top: 2.5rem;
+}
+main section p {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 0.5rem + 4vw, 2.5rem);
+    line-height: 2.3rem;
+    text-align: center;
+    color: var(--darkpurple);
+}
+.card-wrapper {
+    margin-top: 6.3rem;
+    margin-bottom: 6.0rem;
+    display: grid;
+    gap: 3.2rem;
+}
+.card {
+    position: relative;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+}
+.card img {
+    width: 100%;
+    animation: fromBottom 1.2s;
+    
+}
+.card h2 {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--darkblue);
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    background: var(--lightpink);
+    height: 3.5rem;
+    border-radius: 2.0rem;
+    padding: 0 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    animation: fromTop 1.2s .2s backwards;
+}
+footer {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: var(--darkblue);
+    padding-bottom: 10rem;
+}
+footer a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: var(--darkblue);
+
+}
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (min-width:700px) and (max-width:1240px) {
+       body {
+        display: flex;       
+       }
+       main {
+        padding: 0 5rem;
+       }
+       section {
+        display: none;
+       }
+       header::after {
+        content: "Sorvete ou gelado é uma sobremesa gelada à base de lacticínios como leite ou nata, à qual é adicionada fruta ou outros ingredientes e sabores. A maior parte contém açúcar, embora alguns sejam feitos com adoçantes. ";
+        color: var(--white);
+        font-size: clamp(2rem, 1.4vw,2.4rem);
+        line-height: 3.0rem;
+        display: block;
+        margin: auto;
+        max-width: 40.5rem;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 5rem;
+        width: 80%;
+       }
+       header h1 {
+        font-size: clamp(3rem, 0.5rem + 3vw , 4.8rem);
+       }
+       header img {
+        width: 30rem;
+        height: 23rem;
+       }
+       .headerbox {
+        margin-top: 2rem;
+       }
+       .title-wrapper {
+        margin-top: 3rem;
+        min-height: 7rem;
+       }
+       footer {
+        display: inline;
+        text-align: center;
+        margin-bottom: 5rem;
+       }
+    }
+
+@media (min-width:1241px) {
+    .card-wrapper {
+        grid-template-areas:
+        "sorvete1 sorvete4 sorvete5"
+        "sorvete2 sorvete4 sorvete6"
+        "sorvete2 sorvete3 sorvete6"
+        ;
+    
+        }  
+        .card-wrapper div:nth-child(1) {
+                grid-area: sorvete1;
+        }
+        .card-wrapper div:nth-child(2) {
+                grid-area: sorvete4;    
+        }
+        .card-wrapper div:nth-child(3) {
+                grid-area: sorvete3;     
+        }
+        .card-wrapper div:nth-child(4) {
+                grid-area: sorvete2;      
+        }
+        .card-wrapper div:nth-child(5) {
+                grid-area: sorvete5;       
+        }
+        .card-wrapper div:nth-child(6) {
+                grid-area: sorvete6;      
+        }
+        .card {
+            transition: all .3s;
+        }
+        .card:hover {
+            transform: scale(1.06);
+        }
+       body {
+        display: flex;       
+       }
+       main {
+        padding: 0 5rem 5rem;
+       }
+       section {
+        display: none;
+       }
+       header {
+        width: 40%;
+       }
+       header::after {
+        content: "Sorvete ou gelado é uma sobremesa gelada à base de lacticínios como leite ou nata, à qual é adicionada fruta ou outros ingredientes e sabores. A maior parte contém açúcar, embora alguns sejam feitos com adoçantes. ";
+        color: var(--white);
+        font-size: clamp(2rem, 1.4vw,2.4rem);
+        line-height: 3.0rem;
+        display: block;
+        margin: auto;
+        max-width: 40.5rem;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 5rem;
+        width: 80%;
+       }
+       header h1 {
+        font-size: clamp(3rem, 0.5rem + 3vw , 4.8rem);
+       }
+       header img {
+        width: 30rem;
+        height: 23rem;
+       }
+       .headerbox {
+        margin-top: 2rem;
+       }
+       .title-wrapper {
+        margin-top: 3rem;
+        min-height: 7rem;
+       }
+       .card h2 {
+        display: none;
+       }
+       footer {
+        display: inline;
+        text-align: center;
+        margin-bottom: 5rem;
+       }
+    }
