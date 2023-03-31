@@ -1,4 +1,4 @@
-# GridResponsivo-SpaceCream
+# Grid Responsivo-Space Cream
 👩🏻‍💻 Desafio Rockeseat Explorer - Stage 3 realizado com sucesso! 🚀
 
 🔗<a href="https://evelymvasconcellos.github.io/GridResponsivo-SpaceCream/">Acessar Projeto</a>
